@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<!--
+  <robot name="turtlebot_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
+The common turtlebot library of xacros for easy reference
+ -->
+<robot name="turtlebot_gazebo" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- General -->
+  <xacro:include filename="$(find turtlebot_description)/urdf/common_properties.urdf.xacro"/>
+  <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_properties.urdf.xacro"/>
+
+<!-- <joint name="sonar_front_joint" type="fixed">
+    
+    <origin rpy="0 0 0" xyz="0.19 -0.00 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_front"/>
+  </joint>
+ 
+  <link name="sonar_front">
+     
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>  
+    <visual>  
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+   
+      </visual>   
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+   
+ </link>-->
+
+ <!-- <joint name="sonar_rear_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 3.14" xyz="-0.19 -0.00 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_rear"/>
+  </joint>
+
+  <link name="sonar_rear">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>-->
+ <!--<joint name="sonar_left_front_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 0.79" xyz="0.19 0.10 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_left_front"/>
+  </joint>
+
+  <link name="sonar_left_front">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>
+
+
+ <joint name="sonar_right_front_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 -0.79" xyz="0.19 -0.1 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_right_front"/>
+  </joint>
+
+  <link name="sonar_right_front">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>-->
+
+
+
+ <!--<joint name="sonar_left_rear_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 -2.30" xyz="-0.18 -0.13 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_left_rear"/>
+  </joint>
+
+  <link name="sonar_left_rear">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>-->
+
+
+ <!--<joint name="sonar_right_rear_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 2.30" xyz="-0.18 0.13 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_right_rear"/>
+  </joint>
+
+  <link name="sonar_right_rear">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>
+
+
+
+
+
+ <joint name="sonar_right_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 1.57" xyz="0.0 0.185 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_right"/>
+  </joint>
+
+  <link name="sonar_right">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>-->
+
+
+
+
+
+
+<!--<joint name="sonar_left_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 -1.57" xyz="0.0 -0.185 0.05" />
+    <parent link="base_footprint"/>
+    <child link="sonar_left"/>
+  </joint>
+
+  <link name="sonar_left">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.01 0.01"/>
+      </geometry>
+    </visual>    
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+ </link>-->
+
+
+
+</robot>
